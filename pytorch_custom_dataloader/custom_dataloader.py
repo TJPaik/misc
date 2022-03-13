@@ -27,4 +27,4 @@ def custom_dataloader(dataloader, n=3, prepare=2):
             return len(dataloader)
 
     tmp_iterable_ds = TmpIterableDs()
-    return DataLoader(tmp_iterable_ds, 1, False, collate_fn=lambda x: x)
+    return DataLoader(tmp_iterable_ds, 1, False, collate_fn=lambda x: x[0])
